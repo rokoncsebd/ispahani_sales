@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISPAHANI Sales Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HOME PAGE ================= -->
+
+    <div id="homePage">
+
+        <div class="container">
+
+            <div class="header">
+                <img src="images/logo.png" class="logo" alt="ISPAHANI Logo">
+                <h1>ISPAHANI TEA LIMITED</h1>
+                <p>Daily Order System </p>
+            </div>
+
+            <div class="card">
+
+                <h2>👤 Sales Officer</h2>
+
+                <p>Daily Order Entry</p>
+
+                <button onclick="showSalesPage()">
+                    Enter
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h2>👨‍💼 Admin</h2>
+
+                <p>Daily Report</p>
+
+                <button onclick="showAdminPage()">
+                    Login
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= SALES PAGE ================= -->
+
+    <div id="salesPage" style="display:none;">
+
+        <div class="container">
+
+            <button class="backBtn" onclick="goHome()">
+                ⬅ Back
+            </button>
+
+            <div class="header">
+
+                <h1>Daily Order Entry</h1>
+
+                <p>ISPAHANI TEA LIMITED</p>
+
+            </div>
+
+            <div class="dateBox">
+
+                <strong>Date :</strong>
+
+                <span id="today"></span>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Sales Officer</label>
+
+                <select id="staffSelect">
+
+                    <option>Select Name</option>
+
+                </select>
+
+            </div>
+
+            <div id="productList">
+
+            </div>
+
+            <button id="submitBtn">
+
+                Submit Order
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ================= ADMIN LOGIN ================= -->
+
+    <div id="adminPage" style="display:none;">
+
+        <div class="container">
+
+            <button class="backBtn" onclick="goHome()">
+                ⬅ Back
+            </button>
+
+            <div class="header">
+
+                <h1>Admin Login</h1>
+
+                <p>ISPAHANI TEA LIMITED</p>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="adminPin"
+                    placeholder="Enter Password">
+
+            </div>
+
+            <button id="loginBtn">
+
+                Login
+
+            </button>
+
+        </div>
+
+    </div>
+    <!-- ================= DASHBOARD PAGE ================= -->
+
+<!-- ================= DASHBOARD PAGE ================= -->
+
+<div id="dashboardPage" style="display:none;">
+
+    <div class="container dashboardContainer">
+
+        <button class="backBtn" onclick="goHome()">
+            ⬅ Back
+        </button>
+
+        <div class="header">
+
+            <img src="images/logo.png" class="logo" alt="ISPAHANI Logo">
+
+            <p>ISPAHANI TEA LIMITED</p>
+
+        </div>
+
+        <div id="reportArea">
+
+    <div class="reportHeader">
+
+        <h2>Today's Sales Report</h2>
+
+        <span id="reportDate"></span>
+
+    </div>
+    <div class="summaryBox">
+
+    <div class="summaryCard">
+        <h3>👥 Staff</h3>
+        <span id="sumStaff">0</span>
+    </div>
+
+    <div class="summaryCard">
+        <h3>🍵 Tea</h3>
+        <span id="sumTea">0</span>
+    </div>
+
+    <div class="summaryCard">
+        <h3>💰 Food</h3>
+        <span id="sumFood">0</span>
+    </div>
+
+    <div class="summaryCard">
+        <h3>🌾 Rice</h3>
+        <span id="sumRice">0</span>
+    </div>
+
+    <div class="summaryCard">
+        <h3>🍪 Bisc.</h3>
+        <span id="sumBisc">0</span>
+    </div>
+
+</div>
+
+    <table id="reportTable">
+
+                <thead>
+
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Tea(kgs)</th>
+                        <th>Food(Tk)</th>
+                        <th>Rice(kgs)</th>
+                        <th>Bisc(Ctn)</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="reportBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script src="script.js"></script>
+
+    <!-- Success Message -->
+
+<div id="successPopup" class="successPopup">
+
+    <div class="successBox">
+
+        <div class="tick">✅</div>
+
+        <h2>Sales Submitted</h2>
+
+        <p>Your sales has been saved successfully.</p>
+
+        <button onclick="closePopup()">
+            OK
+        </button>
+
+    </div>
+
+</div>
+<footer class="footer">
+    Developed By Rokon V1.0
+    (Internal Use Only)
+</footer>
+
+</body>
+
+</html>
